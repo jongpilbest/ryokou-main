@@ -22,16 +22,19 @@ import Album_div from './Album_div'
 
 
 function Scene2({data}) {
-
+  const model_rotate = useSelector((state) => state.store.rotate_model);
   const backgroundShaderRef2 = useRef(null)
-   
+ 
+   useEffect(()=>{
+  console.log(model_rotate,'? 지금 모델?')
+   },[model_rotate])
   if(data[0]){
   backgroundShaderRef2.current.material.uniforms.u_colorB.value= new Color(data[0])
   backgroundShaderRef2.current.material.uniforms.u_colorA.value= new Color(data[1])
   }
   useFrame(({ clock }) => {
     backgroundShaderRef2.current.material.uniforms.uTime.value = clock.getElapsedTime();
-    
+
 
   })
 

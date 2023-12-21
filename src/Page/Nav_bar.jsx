@@ -64,7 +64,7 @@ return  (
 
   
     {
-                ['HOME','ABOUT','LIVE','DISCOGRAPHY','VIDEOS','NEWS','SCHEDULE'].map((El,index)=>{
+                ['HOME','ABOUT','LIVE','VIDEOS','NEWS','SCHEDULE'].map((El,index)=>{
                   return <div 
                   onClick={()=>{
                     setopen((el)=>!el)

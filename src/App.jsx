@@ -5,6 +5,7 @@ import About from './Page/About'
 import React from 'react'
 import First from './Page/First'
 import Live from './Page/Live'
+import Scdule from './Page/Scdule'
 import Nav from './Page/Nav'
 function App() {
 
@@ -40,6 +41,12 @@ function App() {
       element={
 
 <Live></Live>
+
+      } />
+         <Route path="/Schedule" 
+      element={
+
+<Scdule></Scdule>
 
       } />
       </Routes>
