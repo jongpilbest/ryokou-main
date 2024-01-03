@@ -72,7 +72,7 @@ const First= function({click}){
 
 
   const model1=useLoader(GLTFLoader, '/new_3.glb')
-  const model7=useLoader(GLTFLoader, '/new_1.glb')
+  const model7=useLoader(GLTFLoader, '/new_12.glb')
   const model2=useLoader(GLTFLoader, '/cover4.glb')
   const model3=useLoader(GLTFLoader, '/new_2.glb')
   

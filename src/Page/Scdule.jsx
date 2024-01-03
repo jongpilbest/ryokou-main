@@ -1,6 +1,9 @@
 
 import React from "react";
 import './Scdule.css'
+import right from '../assets/right_2.svg'
+
+import left from '../assets/left _2.svg'
 const Scdule= function(){
   const start_day=[
     26
@@ -27,7 +30,14 @@ const Scdule= function(){
           }}
           className="img__profile_div">
             <div className="cal_header">
+              <img
+              className="small_right"
+              src={left}></img>
+  
               <p className="cal_p_header">2023.12</p>
+              <img
+               className="small_right"
+              src={right}></img>
             </div>
              <div style={{
               width:'100%',
