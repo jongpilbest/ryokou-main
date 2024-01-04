@@ -75,6 +75,27 @@ const Scdule= function(){
              </div>
 
              <div>
+              <div className="schedule_date">
+                <div className="schedule_inner">
+                  <div className="left_schedule">
+                    <div className="memo_">
+                      <p className="p_P">2024.02.27 （火）</p>
+                    </div>
+                    <div className="memo__">
+                      <p className="p_memo">RADIO</p>
+                    </div>
+
+                  </div>
+                  <div className="right_schedule">
+                    <p className="p_Pp">緑黄色社会・長屋晴子のオールナイトニッポンX</p>
+                   <p className="p_time">24:00〜 25:00</p>
+                   <p className="p_link">
+https://www.allnightnippon.com/haruko/</p>
+                  </div>
+                </div>
+
+
+              </div>
 
   
     </div>

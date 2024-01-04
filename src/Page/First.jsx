@@ -5,6 +5,7 @@ import react, { useRef ,useMemo, useState,} from 'react'
 // Three
 import { Color } from 'three'
 // Three
+import logo from '../assets/name_logo.svg'
 import { OrbitControls, ScrollControls,Scroll } from '@react-three/drei'
 import { useSelector, useDispatch } from 'react-redux'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -15,11 +16,11 @@ import Fragment_Shader from '../Shader/Fragement_Shader'
 import Vertex_shader from '../Shader/Vertex_shader'
 
 import play from '../assets/play.svg'
-
+import play_white from '../assets/play_white.svg'
 import '../App.css'
 
 import Album_div from './Album_div'
-
+import up from '../assets/up.svg'
 
 function Scene2({data}) {
   const model_rotate = useSelector((state) => state.store.rotate_model);
@@ -93,6 +94,8 @@ const First= function({click}){
       date:'2019.11.06',
       type:'single',
       money:'¥1,430',
+      song_name:['sabotage','4:05'],
+      image:'https://img.youtube.com/vi/FWQzurioulQ/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=FWQzurioulQ',
       music:['sabotage','Alright!','sabotage (Instrumental)'],
       introduce:'TV 테마송과 CM송, 9월에는 첫 영화 주제가를 담당하는 등 인기를 더하고 있는 4명의 밴드 녹황색 사회의 첫 싱글 발매!.TBS 화요일드라마 G선상의 당신과 나의 주제가를 담당한 이 곡은 자신을 이해할려고 노력하는 하루에 용기를 부여하는 녹황색 사회의 응원가이다.더블곡으로 NHK 종합 텔레비전 「맛있다!」테마송 「Alright!!」를 수록. 한정판에는 2019년 6월 14일에 개최된 녹황색야제 vol.9-도쿄편-의인기곡 Alice 다음에 봐 라이브 음원이 들어있다.11월 8일부터는 9개 도시를 순회하는 전국투어 녹샤화 계획 2019를 개최한다.'
@@ -103,6 +106,8 @@ const First= function({click}){
       date:'2020.09.30',
       type:'album',
       money:'¥3,300',
+      song_name:['mela','4:10'],
+      image:'https://img.youtube.com/vi/aRDURmIYBZ4/maxresdefault.jpg',
       music:['SINGALONG','sabotage','Mela!','想い人','inori'],
       youtube:'https://www.youtube.com/watch?v=aRDURmIYBZ4',
       introduce:'지난 4월 발매되어 iTunes 앨범 종합 1위를 차지하며 각 스토어에서의 상위 순위를 기록하고 있는 New Album SINGALONG. 녹황색 사회의 대표작이 될 앨범의 발매가 드디어 결정되었다. <컬러링 밀크> CM송 <Mela!>, 애니메이션 <나의 히어로 아카데미아> 4기 2쿨 엔딩 곡이 된 <Shout Baby>, 드라마 <G선상의 너와 나> 주제가 <sabotage>, 영화 <첫사랑 로스타임> 주제가 <사랑꾼> 등 인기 곡등 다양한 곡들이 들어있는 앨범이다.',
@@ -114,6 +119,8 @@ const First= function({click}){
       date:'2023.09.06',
       type:'album',
       money:'¥3,900',
+      song_name:['サマータイムシンデレラ','4:09'],
+      image:'https://img.youtube.com/vi/nFR3uXaR0wk/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=nFR3uXaR0wk',
 
       introduce:'서머타임 신데렐라는 후지TV 9월의 드라마 한여름의 신데렐라의 오프닝곡으로 여름 무대를 주제로 한 러브송이다. "단 한 여름, 단 한 여름".순식간에 지나가는 시간 속에서 분주하게 감정이 겹치는 모습, 무언가가 시작될 거 같은 기대감, 감정이 불러오는 초조감,고양감을 함께 느낄 수 있는 곡이다.이 드라마 삽입곡으로 사용되고 있는 magic hour 도 포함하고 있다.한정판은, "pink bluetour 2023" 도쿄 공연(2023.6.15@도쿄 국제 포럼)의 라이브 영상을 수록한 Blu-ray 영상이 들어있다.',
@@ -128,6 +135,8 @@ const First= function({click}){
       date:'2020.02.19',
       type:'single',
       money:'¥1,110',
+      song_name:['Shout Baby','4:35'],
+      image:'https://img.youtube.com/vi/Ww8oxgqDQSs/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=Ww8oxgqDQSs',
       introduce:'영화 주제가, 드라마 주제가 등을 작곡하여 꾸준히 인기·표현력의 영역을 넓혀가는 4명의 밴드 녹황색 사회.연말 대형 페스티벌 출연, 지상파 TV특집방송 등 인기의 기세를 올리고 있는 이 밴드의 다음 작품은 애니메이션 타이틀로 결정되었다.인기 TV 애니메이션 나의 히어로 아카데미아 4기 2쿨 엔딩곡 Shout Baby는 나가야 하루코(Vo&Gt) 작사 작곡으로 밴드만의 특유의 신나는 에너지가 담겨있으며,녹황색 사회가 완성을 더했다.더블곡에는, 애니메이션의 2기 2쿨·오프닝 테마 「하늘에게 노래하다」(amazarashi) 커버를 수록하였다.',
       music:['Shout Baby','空に歌えば','Shout Baby (Instrumental)'],
@@ -139,6 +148,8 @@ const First= function({click}){
       date:'2022.01.26',
       type:'album',
       money:'¥3,450',
+      song_name:['キャラクター','4:31'],
+      image:'https://img.youtube.com/vi/ulforNn47PM/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=ulforNn47PM',
       introduce:'멤버 전원이 작곡 작사에 참여하는 싱어송 라이터 밴드로 도약하고 있으며 다양한 변화를 보여주고 있는 녹황색 사화의 새로운 앨범이 발매되었다. 드라마 애니메이션 CM 에 참여한 많은 곡들과 미발표된 신곡들이 포함되어있다. 각자 본인이 자신의 세계의 주연이라는 의미를 담은 곡이 타이틀로 결정되었다.',
       music:['Actor','キャラクター','merry-go-round','これからのこと、それからのこと'],
@@ -148,6 +159,8 @@ const First= function({click}){
       name:'The sun rises again',
       date:'2022.04.20',
       type:'single',
+      song_name:['陽はまた昇るから','4:39'],
+      image:'https://img.youtube.com/vi/e5FEOVTRfFc/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=e5FEOVTRfFc',
       money:'¥1,630',
       introduce:'2022년 1월 26일 정규앨범 Actor 를 발매하여 최고의 인기를 누리고 있는 녹황색사회가 최대 규모의 전국 홀 투어를 앞두고 있는 시점에서 새로운 싱글을 발매한다. 타이틀곡  해는 다시 뜨니까 는 2022년 4월 22일 개봉한 영화 짱구는 못말려 모노노케 닌자 을 위해 작곡/ 작사한 곡으로 녹황색사회가 시도하지 않았던 새로운 사운드 을 보여주는 팝송이다. ',
@@ -159,7 +172,9 @@ const First= function({click}){
       name:'Pink blue',
       date:'2023.05.17',
       type:'album',
-      youtube:'https://www.youtube.com/watch?v=vudrTjCf-LM',
+      song_name:['ピンクブルー', '4:11'],
+      image:'https://img.youtube.com/vi/vudrTjCf-LM/maxresdefault.jpg'
+,      youtube:'https://www.youtube.com/watch?v=vudrTjCf-LM',
       money:'¥3,630',
       introduce:'처음으로 일본 무도관 공연 , 연말 nhk 홍백 가합전 공연을 성환리에 성공적으로 끝낸 녹황색 사회의 새로운 앨범 모든 멤버가 각자의 매력과 특색을 담아 작사 작곡을 하여 노래를 완성시켰다. 다양한 곡조와 음색이 담겨 녹황색 사회의 특유의 분위기를 느낄수 있다. ',
 
@@ -296,8 +311,8 @@ const First= function({click}){
       width:'100%',
       marginTop:'10%'
      
-    }}>
- <p className='show_inner_name'>
+      }}>
+     <p className='show_inner_name'>
     Play List
       </p>
       <div className='show_play_list'>
@@ -396,6 +411,54 @@ const First= function({click}){
       </div>
 
     </div>
+    <div style={{
+      width:'100%',
+      marginTop:'10%',
+      zIndex:5
+     
+    }}>
+      <div className='video_mari'>     </div>
+      <p className='show_inner_name'> Video Contents </p>
+    
+
+
+     
+      <div className='show_video_content'>
+        <div className='play_white'>
+          <img 
+          style={{
+            width:'100%',
+            height:'100%'
+          }}
+          src={play_white}></img>
+        </div>
+        <img 
+        style={{
+          width:'100%',
+          height:'100%'
+        }}
+        src={
+           list_name[name-1].image
+        }></img>
+          
+      </div>
+      <div className='viedo_p' >
+         <p className='video_name'> 緑黄色社会 - 『{ list_name[name-1].song_name[0]}』 Official Video</p>
+      <p>{ list_name[name-1].song_name[1]}</p>
+        </div>
+      <div className='first_up'>
+        <img 
+        className='up'
+        src={up}></img>
+      </div>
+      <div  className='first_sita'>
+        <p className='music_p'>copyright(c) Storm Labels Inc. All Rights Reserved.</p>
+        <img className='fisrt_sita_size'
+       src={logo}
+     ></img>
+      </div>
+
+      </div>
     </div>
 
     
