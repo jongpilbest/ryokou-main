@@ -2,7 +2,7 @@
 import React from "react";
 import './Scdule.css'
 import right from '../assets/right_2.svg'
-
+import Sita from "./sita";
 import left from '../assets/left _2.svg'
 const Scdule= function(){
   const start_day=[
@@ -100,8 +100,12 @@ https://www.allnightnippon.com/haruko/</p>
   
     </div>
             </div>
+      
+            <Sita></Sita>
             </div>
+      
             </div>
+        
             </div>
             </div>
   )

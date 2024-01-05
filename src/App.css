@@ -2,10 +2,10 @@
 
 *{
 
-overflow-x: hidden;
+
 font-family: 'Inter';
 -ms-overflow-style: none; /* 인터넷 익스플로러 */
-scrollbar-width: none; 
+
 
 }
 
@@ -456,7 +456,7 @@ background-color: yellow;
 
 }
 .video_name{
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
 }
@@ -503,3 +503,4 @@ background-color: yellow;
   width: 50%;
   height: 50%;
 }
+

@@ -5,7 +5,8 @@ import react, { useRef ,useMemo, useState,} from 'react'
 // Three
 import { Color } from 'three'
 // Three
-import logo from '../assets/name_logo.svg'
+import Sita from './sita.jsx'
+
 import { OrbitControls, ScrollControls,Scroll } from '@react-three/drei'
 import { useSelector, useDispatch } from 'react-redux'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -20,7 +21,7 @@ import play_white from '../assets/play_white.svg'
 import '../App.css'
 
 import Album_div from './Album_div'
-import up from '../assets/up.svg'
+
 
 function Scene2({data}) {
   const model_rotate = useSelector((state) => state.store.rotate_model);
@@ -446,17 +447,11 @@ const First= function({click}){
          <p className='video_name'> 緑黄色社会 - 『{ list_name[name-1].song_name[0]}』 Official Video</p>
       <p>{ list_name[name-1].song_name[1]}</p>
         </div>
-      <div className='first_up'>
-        <img 
-        className='up'
-        src={up}></img>
-      </div>
-      <div  className='first_sita'>
-        <p className='music_p'>copyright(c) Storm Labels Inc. All Rights Reserved.</p>
-        <img className='fisrt_sita_size'
-       src={logo}
-     ></img>
-      </div>
+     
+
+
+
+<Sita></Sita>
 
       </div>
     </div>

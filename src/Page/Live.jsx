@@ -1,12 +1,8 @@
 
 import React from "react";
 import './About.css'
-import Header from "./Header";
-import profile from '../assets/profile.png'
-import twitter from '../assets/twitter.svg'
-import instagram from '../assets/instagram.svg'
-import youtube from '../assets/youtube.svg'
-import apple from '../assets/apple.svg'
+
+import Sita from "./sita";
 const Live= function(){
   const live_list= [
  {
@@ -73,7 +69,7 @@ const Live= function(){
           
 }
          
-
+<Sita></Sita>
 </div>
  
           </div>
