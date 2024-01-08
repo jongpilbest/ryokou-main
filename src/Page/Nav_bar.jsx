@@ -9,7 +9,7 @@ return  (
   <div style={{
     width:'100%',
     height:'100vh',
-    backgroundColor:'#404040',
+    backgroundColor:'#262626',
    opacity:0.9,
     position:'absolute',
     zIndex:'5',
@@ -64,7 +64,7 @@ return  (
 
   
     {
-                ['HOME','ABOUT','LIVE','VIDEOS','NEWS','SCHEDULE'].map((El,index)=>{
+                ['HOME','ABOUT','LIVE','NEWS','SCHEDULE'].map((El,index)=>{
                   return <div 
                   onClick={()=>{
                     setopen((el)=>!el)
@@ -78,6 +78,19 @@ return  (
                     </div>
                 })
                }
+                   <div style={{
+                width:'100%',
+                height:'5vh',
+                borderStyle:'solid',
+                borderColor:'white',
+                borderWidth:'0.1vw',
+                borderRightColor:'transparent',
+               borderBottomColor:'transparent',
+               borderLeftColor:'transparent',
+            
+               }}>
+
+               </div>
           <div style={{
             width:'18%',
             height:'6vh',
@@ -99,19 +112,7 @@ return  (
 
           </div>
 </div>
-               <div style={{
-                width:'100%',
-                height:'10vh',
-                borderStyle:'solid',
-                borderColor:'#7D7D7D',
-                borderWidth:'0.1vw',
-                borderRightColor:'transparent',
-               borderBottomColor:'transparent',
-               borderLeftColor:'transparent',
-            
-               }}>
-
-               </div>
+           
     </div>
     <div></div>
 

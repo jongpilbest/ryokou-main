@@ -26,20 +26,7 @@ const Nav= forwardRef((props,ref)=>{
     icon={list_icon}
     ></Nav_bar>
    }
-    <div className='name_'>
-
-     <img 
-     onClick={()=>{
-      setopen((el)=>!el)
-     }}
-     style={{
-      height:'50%',
-      width:'5%'
-     }}
-     src={menu}></img>
  
-
-     </div>
    
  <div className='header_main'>
     <NavLink 
@@ -57,6 +44,7 @@ const Nav= forwardRef((props,ref)=>{
      </div>
      
        <div className='canvas_div'>
+        
         <div style={{
     width:'30%',
     height:'80%'
@@ -90,10 +78,26 @@ const Nav= forwardRef((props,ref)=>{
             }}
           className='img_'
           src={El}></img>
+          
         </div>
       })
     }
+    
   </div>
+  <div className='name_'>
+
+<img 
+onClick={()=>{
+ setopen((el)=>!el)
+}}
+style={{
+ height:'50%',
+ width:'50%'
+}}
+src={menu}></img>
+
+
+</div>
   </div>
    </div>
 </div>

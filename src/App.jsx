@@ -7,6 +7,7 @@ import First from './Page/First'
 import Live from './Page/Live'
 import Scdule from './Page/Scdule'
 import Nav from './Page/Nav'
+import News from './Page/News'
 function App() {
 
   const inputRef = useRef(null);
@@ -47,6 +48,12 @@ function App() {
       element={
 
 <Scdule></Scdule>
+
+      } />
+        <Route path="/News" 
+      element={
+
+<News></News>
 
       } />
       </Routes>
