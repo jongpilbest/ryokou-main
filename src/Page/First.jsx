@@ -6,7 +6,7 @@ import react, { useRef ,useMemo, useState,} from 'react'
 import { Color } from 'three'
 // Three
 import Sita from './sita.jsx'
-
+import Modal from './Modal/modal';
 import { OrbitControls, ScrollControls,Scroll } from '@react-three/drei'
 import { useSelector, useDispatch } from 'react-redux'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
@@ -16,7 +16,7 @@ import Alubm_inner from './Alubm_inner'
 import Fragment_Shader from '../Shader/Fragement_Shader'
 import Vertex_shader from '../Shader/Vertex_shader'
 
-import play from '../assets/play.svg'
+import play from '../assets/right_white.svg'
 import play_white from '../assets/play_white.svg'
 import '../App.css'
 
@@ -71,7 +71,7 @@ function Scene2({data}) {
 const First= function({click}){
   const name = useSelector((state) => state.store.name)
   const visible = useSelector((state) => state.store.visible);
-
+  const [showModal, setShowModal] = useState(false);
 
   const model1=useLoader(GLTFLoader, '/new_3.glb')
   const model7=useLoader(GLTFLoader, '/new_12.glb')
@@ -91,7 +91,7 @@ const First= function({click}){
   },[visible])
   const list_name=[
     {
-      name:'sabotage',
+      name:'SABOTAGE',
       date:'2019.11.06',
       type:'single',
       money:'¥1,430',
@@ -99,7 +99,7 @@ const First= function({click}){
       image:'https://img.youtube.com/vi/FWQzurioulQ/maxresdefault.jpg',
       youtube:'https://www.youtube.com/watch?v=FWQzurioulQ',
       music:['sabotage','Alright!','sabotage (Instrumental)'],
-      introduce:'TV 테마송과 CM송, 9월에는 첫 영화 주제가를 담당하는 등 인기를 더하고 있는 4명의 밴드 녹황색 사회의 첫 싱글 발매!.TBS 화요일드라마 G선상의 당신과 나의 주제가를 담당한 이 곡은 자신을 이해할려고 노력하는 하루에 용기를 부여하는 녹황색 사회의 응원가이다.더블곡으로 NHK 종합 텔레비전 「맛있다!」테마송 「Alright!!」를 수록. 한정판에는 2019년 6월 14일에 개최된 녹황색야제 vol.9-도쿄편-의인기곡 Alice 다음에 봐 라이브 음원이 들어있다.11월 8일부터는 9개 도시를 순회하는 전국투어 녹샤화 계획 2019를 개최한다.'
+      introduce:'2019년 봄투어는 각지에서 솔드아웃 대형 여름 패스티벨에도 다수 출현하였다. tv 테마송이나 cm 타이업 , 9월 에는 첫 영화 주제가를 담당하는듯 기세를 더하고 있는 4인조 밴드 , 녹황색 사회의 첫 싱글 이 발매된다. tbs 화요일 드라마 g선상의 당신과 나의 주제가인 이 곡은 나다욺을 추구하고 몸부림치는 도전을 계속하는 날들에 용기를 주는 녹황색 사회의 특유의 응원가이다. 더블곡으로는 nhk 종합테레비전 의 테마송인 alright 이 수록 되어있다. 초회 생산 한정판에는 2019년 6월 14일에 개최되는 녹황색야간회 vol.9 도쿄편에서 인기곡인 alice 안녕 라이브 음원이 처음으로 수록되었다.'
       ,url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/188477__510_510_0.jpg'
     },
     {
@@ -195,6 +195,11 @@ const First= function({click}){
   return(
         <div  className={visible?"main_div": "main_second"}>
          
+         {
+            showModal&&  <Modal onClose={() => setShowModal(false)}></Modal>
+          }
+
+
            <div 
          
            className='main__div'>
@@ -288,7 +293,7 @@ const First= function({click}){
     <div className='show_inner'>  
     <div style={{
       width:'100%',
-      marginTop:'10%'
+      marginTop:'12%'
      
     }}>
   
@@ -310,11 +315,11 @@ const First= function({click}){
       
     <div style={{
       width:'100%',
-      marginTop:'10%'
+      marginTop:'12%'
      
       }}>
      <p className='show_inner_name'>
-    Play List
+    PLAY LIST
       </p>
       <div className='show_play_list'>
        <div className='show_div'>
@@ -358,8 +363,10 @@ const First= function({click}){
           </p>
             </div>
          
-          <div className='btn'>
-            <p className='second_play'>Buy</p>
+          <div
+            onClick={() => setShowModal(true)}
+          className='btn'>
+            <p className='second_play_1'>BUY</p>
             <div className='play_div'>
                   <img
                        style={{
@@ -414,12 +421,12 @@ const First= function({click}){
     </div>
     <div style={{
       width:'100%',
-      marginTop:'10%',
+      marginTop:'12%',
       zIndex:5
      
     }}>
       <div className='video_mari'>     </div>
-      <p className='show_inner_name'> Video Contents </p>
+      <p className='show_inner_name'> VIDEO CONTENTS </p>
     
 
 

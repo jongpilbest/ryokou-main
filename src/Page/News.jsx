@@ -2,6 +2,7 @@
 import NewS_com from "./News_com";
 import React from "react";
 import classes from './news.module.css'
+import Sita from "./sita";
 const News= function(){
 return<div  className="main_div">
          
@@ -22,10 +23,14 @@ return<div  className="main_div">
                   return <NewS_com></NewS_com>
                 })
               }
+              <Sita></Sita>
        
         </div>
+        
         </div>
+    
         </div>
+       
         </div>
 }
 

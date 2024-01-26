@@ -57,6 +57,7 @@ overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .main_header_change{
   height: 5vh;
@@ -327,15 +328,16 @@ align-items: center;
   flex-direction: column;
 }
 .show_inner_name{
-  font-size: 2vw;
+  font-size: 2.2vw;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 400;
   color: black;
   text-align: start;
   z-index: 5;
   margin-top: 5%;
+  letter-spacing: 3px;
 
 }
 
@@ -346,11 +348,12 @@ align-items: center;
 }
 
 .show_p{
-  font-size: 0.75vw;
+  font-size: 0.8vw;
 font-weight: 500;
 line-height: 2;
 color: black;
 margin: 0;
+line-height: 35px;
 }
 .show_play_list{
 
@@ -389,12 +392,13 @@ background-color: yellow;
   height: 80%;
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none;
+  overflow: scroll;
 }
 .btn{
   width: 35%;
   height: 4vh;
-  background-color: #F3F3F3;
-  border-radius: 30px;
+  background-color: #90A3E2;
+
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -406,16 +410,25 @@ background-color: yellow;
 }
 
 .second_play{
-  font-size: 0.85vw;
+  font-size: 0.75vw;
   margin-top: 5px;
   color: black;
   margin-bottom: 0;
 }
+.second_play_1{
+  font-size: 0.8vw;
+  margin-top: 5px;
+  color: white;
+  margin-bottom: 0;
+  
+}
+
 .first_play{
   font-size: 2vw;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
   color: black;
+  letter-spacing: 3px;
 }
 .total_show_iner{
   width: 100%;
@@ -438,7 +451,7 @@ background-color: yellow;
 .video_mari{
   width: 200%;
   height: 80vh;
-  background-color: #AAACE2;
+  background-color: #90A3E2;
   position: absolute;
   left: -50%;
   z-index: -1;

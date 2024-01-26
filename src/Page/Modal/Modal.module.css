@@ -1,0 +1,64 @@
+.Modal{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(36, 36, 36, 0.945);
+
+    
+
+}
+
+.inner{
+    width: 50%;
+    height: 35%;
+    background-color: #B8C4EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.inner_div{
+    width: 80%;
+    height: 70%;
+    
+}
+
+.iner_p{
+    font-size: 1.1vw;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+ 
+    display: flex;
+    align-items: center;
+}
+.logo_div{
+    top: 10%;
+    right: 5%;
+    width: 1.5vw;
+    height: 1.5vw;
+
+    position:absolute;
+
+}
+.x_line{
+    
+  width: 100%;
+  height: 100%;
+  
+}
+
+.music_div{
+    width: 25%;
+    height: 30%;
+    background-color: white;
+    overflow: hidden;
+}
