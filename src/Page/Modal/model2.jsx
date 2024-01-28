@@ -3,7 +3,9 @@ import { useEffect } from 'react';
 import React from 'react';
 import { createPortal } from 'react-dom';
 import X_line from '../../assets/x_outline.svg';
-export default function  Modal2({onClose}){
+export default function  Modal2({onClose,link}){
+
+  console.log('클릭 이벤트')
     let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
     let windowHeight = window.innerHeight; // 스크린 창
     useEffect(() => {
@@ -38,7 +40,7 @@ onClick={onClose}
 
                 </div>
         <div className={classes.inner}>
-           
+        <iframe width='100%' height="100%" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                
                 </div>   
 

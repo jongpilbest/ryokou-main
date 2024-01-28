@@ -3,6 +3,8 @@
 *{
 
 
+    scroll-behavior: smooth;
+ 
 font-family: 'Inter';
 -ms-overflow-style: none; /* 인터넷 익스플로러 */
 
@@ -207,7 +209,7 @@ overflow: hidden;
   margin-bottom: 0;
   color: white;
   text-align: center;
-
+  letter-spacing: 3px;
 
   font-weight: 500;
 

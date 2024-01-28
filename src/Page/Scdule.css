@@ -45,6 +45,7 @@
 }
 .th{
   width: 14.2%;
+  line-height: 3;
   background-color: rgb(48, 48, 48);
  
 }
@@ -96,8 +97,9 @@ height: 10vw;
  
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden;
+
  
 }
 .memo_{

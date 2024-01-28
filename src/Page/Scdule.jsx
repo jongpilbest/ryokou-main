@@ -78,12 +78,13 @@ const Scdule= function(){
               <div className="schedule_date">
                 <div className="schedule_inner">
                   <div className="left_schedule">
+                  <div className="memo__">
+                      <p className="p_memo">RADIO</p>
+                    </div>
                     <div className="memo_">
                       <p className="p_P">2024.02.27 （火）</p>
                     </div>
-                    <div className="memo__">
-                      <p className="p_memo">RADIO</p>
-                    </div>
+                   
 
                   </div>
                   <div className="right_schedule">

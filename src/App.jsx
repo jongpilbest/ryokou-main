@@ -7,6 +7,7 @@ import First from './Page/First'
 import Live from './Page/Live'
 import Scdule from './Page/Scdule'
 import Nav from './Page/Nav'
+import { Suspense } from 'react';
 import News from './Page/News'
 function App() {
 
@@ -17,6 +18,10 @@ function App() {
     <Nav ref={inputRef} ></Nav>
     <Routes>
       <Route path="/HOME" element={
+        <Suspense fallback={<p> Loading</p>}>
+
+
+    
          <First click={(visible)=>{
           if(visible==false){
             console.log('false?')
@@ -30,7 +35,7 @@ function App() {
           }
           
          }}></First>
-       
+           </Suspense>
     } />
       <Route path="/About" 
       element={

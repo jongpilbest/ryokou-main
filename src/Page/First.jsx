@@ -15,7 +15,7 @@ import { Canvas, useFrame,useLoader } from '@react-three/fiber'
 import Alubm_inner from './Alubm_inner'
 import Fragment_Shader from '../Shader/Fragement_Shader'
 import Vertex_shader from '../Shader/Vertex_shader'
-
+import Modal2 from './Modal/model2.jsx';
 import play from '../assets/right_white.svg'
 import play_white from '../assets/play_white.svg'
 import '../App.css'
@@ -71,7 +71,14 @@ function Scene2({data}) {
 const First= function({click}){
   const name = useSelector((state) => state.store.name)
   const visible = useSelector((state) => state.store.visible);
+
+
+
   const [showModal, setShowModal] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+
+
+
 
   const model1=useLoader(GLTFLoader, '/new_3.glb')
   const model7=useLoader(GLTFLoader, '/new_12.glb')
@@ -91,7 +98,7 @@ const First= function({click}){
   },[visible])
   const list_name=[
     {
-      name:'SABOTAGE',
+      name:'Sabotage',
       date:'2019.11.06',
       type:'single',
       money:'¥1,430',
@@ -100,7 +107,8 @@ const First= function({click}){
       youtube:'https://www.youtube.com/watch?v=FWQzurioulQ',
       music:['sabotage','Alright!','sabotage (Instrumental)'],
       introduce:'2019년 봄투어는 각지에서 솔드아웃 대형 여름 패스티벨에도 다수 출현하였다. tv 테마송이나 cm 타이업 , 9월 에는 첫 영화 주제가를 담당하는듯 기세를 더하고 있는 4인조 밴드 , 녹황색 사회의 첫 싱글 이 발매된다. tbs 화요일 드라마 g선상의 당신과 나의 주제가인 이 곡은 나다욺을 추구하고 몸부림치는 도전을 계속하는 날들에 용기를 주는 녹황색 사회의 특유의 응원가이다. 더블곡으로는 nhk 종합테레비전 의 테마송인 alright 이 수록 되어있다. 초회 생산 한정판에는 2019년 6월 14일에 개최되는 녹황색야간회 vol.9 도쿄편에서 인기곡인 alice 안녕 라이브 음원이 처음으로 수록되었다.'
-      ,url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/188477__510_510_0.jpg'
+      ,url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/188477__510_510_0.jpg',
+      link:"https://www.youtube.com/embed/FWQzurioulQ?si=a9SDzr_7BDEJJRUg" 
     },
     {
       name:'SINGAGLONG',
@@ -111,8 +119,9 @@ const First= function({click}){
       image:'https://img.youtube.com/vi/aRDURmIYBZ4/maxresdefault.jpg',
       music:['SINGALONG','sabotage','Mela!','想い人','inori'],
       youtube:'https://www.youtube.com/watch?v=aRDURmIYBZ4',
-      introduce:'지난 4월 발매되어 iTunes 앨범 종합 1위를 차지하며 각 스토어에서의 상위 순위를 기록하고 있는 New Album SINGALONG. 녹황색 사회의 대표작이 될 앨범의 발매가 드디어 결정되었다. <컬러링 밀크> CM송 <Mela!>, 애니메이션 <나의 히어로 아카데미아> 4기 2쿨 엔딩 곡이 된 <Shout Baby>, 드라마 <G선상의 너와 나> 주제가 <sabotage>, 영화 <첫사랑 로스타임> 주제가 <사랑꾼> 등 인기 곡등 다양한 곡들이 들어있는 앨범이다.',
+      introduce:'4월에 발매되어, 아이튠즈 앨범 종합 1위를 획득하는 등 각 스토어에서의 상위 랭크 인을 기록하고 있는 New Album 「SINGALONG」. 녹황색 사회의 대표작이 될 이 작품의, 발매 연기가 되고 있던 CD 릴리즈가 드디어 결정! 「파르티 컬러링 밀크」CM송 「Mela!」, 애니메이션 「나의 히어로 아카데미아」 제 4기 제 2 쿨 엔딩 테마가 된 「Shout Baby」, 드라마 「G선상의 당신과 나」주제가 「sabotage」, 영화 「첫사랑 로스타임」주제가「생각인」등의 인기 악곡은 물론, 녹황색 사회의 큰 도약!',
       url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/195627__510_510_0.jpg'
+     ,link:  "https://www.youtube.com/embed/aRDURmIYBZ4?si=zzyK8PHViUuBKUS1" 
     },
     
     {
@@ -129,7 +138,8 @@ const First= function({click}){
       music:['サマータイムシンデレラ','マジックアワー','サマータイムシンデレラ (Instrumental)',
     'マジックアワー (Instrumental)'],
     url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/289901__510_510_0.jpg'
-    },
+    ,link:  "https://www.youtube.com/embed/nFR3uXaR0wk?si=2lcuO34oy2HTcrSK"  
+  },
     
     {
       name:'Shout Baby',
@@ -142,6 +152,7 @@ const First= function({click}){
       introduce:'영화 주제가, 드라마 주제가 등을 작곡하여 꾸준히 인기·표현력의 영역을 넓혀가는 4명의 밴드 녹황색 사회.연말 대형 페스티벌 출연, 지상파 TV특집방송 등 인기의 기세를 올리고 있는 이 밴드의 다음 작품은 애니메이션 타이틀로 결정되었다.인기 TV 애니메이션 나의 히어로 아카데미아 4기 2쿨 엔딩곡 Shout Baby는 나가야 하루코(Vo&Gt) 작사 작곡으로 밴드만의 특유의 신나는 에너지가 담겨있으며,녹황색 사회가 완성을 더했다.더블곡에는, 애니메이션의 2기 2쿨·오프닝 테마 「하늘에게 노래하다」(amazarashi) 커버를 수록하였다.',
       music:['Shout Baby','空に歌えば','Shout Baby (Instrumental)'],
       url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/191937__510_510_0.jpg'
+      ,link:  "https://www.youtube.com/embed/Ww8oxgqDQSs?si=Y44znpt7_FSWObbQ" 
     },
     
     {
@@ -155,6 +166,8 @@ const First= function({click}){
       introduce:'멤버 전원이 작곡 작사에 참여하는 싱어송 라이터 밴드로 도약하고 있으며 다양한 변화를 보여주고 있는 녹황색 사화의 새로운 앨범이 발매되었다. 드라마 애니메이션 CM 에 참여한 많은 곡들과 미발표된 신곡들이 포함되어있다. 각자 본인이 자신의 세계의 주연이라는 의미를 담은 곡이 타이틀로 결정되었다.',
       music:['Actor','キャラクター','merry-go-round','これからのこと、それからのこと'],
       url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/227873__510_510_0.jpg'
+   
+      ,link:  "https://www.youtube.com/embed/ulforNn47PM?si=6ydrYKK58afzMX6T" 
     },
     {
       name:'The sun rises again',
@@ -168,6 +181,8 @@ const First= function({click}){
 
       music:['陽はまた昇るから','時のいたずら','陽はまた昇るから -Instrumental-'],
       url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/231720__510_510_0.jpg'
+       ,link:"https://www.youtube.com/embed/e5FEOVTRfFc?si=HEiyzi752eK_MMok"
+   
     },
     {
       name:'Pink blue',
@@ -181,6 +196,8 @@ const First= function({click}){
 
       music:['ピンクブルー',' Starry Drama','ジブンセイフク',' あうん',' Don!!','ミチヲユケ'],
       url:'https://www.sonymusic.co.jp/adm_image/common/artist_image/70007000/70007781/jacket_image/279858__220_220_0.jpg?1701659141730'
+    
+      ,link:"https://www.youtube.com/embed/vudrTjCf-LM?si=sWpiF-yW9kH2zWty" 
     },
     
     
@@ -197,6 +214,12 @@ const First= function({click}){
          
          {
             showModal&&  <Modal onClose={() => setShowModal(false)}></Modal>
+          }
+          {
+            showModal2&&  <Modal2
+            
+            link={list_name[name-1].link}
+            onClose={() => setShowModal2(false)}></Modal2>
           }
 
 
@@ -434,6 +457,7 @@ const First= function({click}){
       <div className='show_video_content'>
         <div className='play_white'>
           <img 
+             onClick={() => setShowModal2(true)}
           style={{
             width:'100%',
             height:'100%'
@@ -441,6 +465,7 @@ const First= function({click}){
           src={play_white}></img>
         </div>
         <img 
+         
         style={{
           width:'100%',
           height:'100%'
