@@ -6,3 +6,11 @@
 
 # 소개페이지
 ![image](https://github.com/jongpilbest/ryokou-main/assets/105302605/ded9cda1-3e55-4a89-89cc-aea9b9e955c1)
+
+
+# 라이브 페이지
+![image](https://github.com/jongpilbest/ryokou-main/assets/105302605/184e6e03-f509-4970-a8af-0bb7c514274f)
+
+# 스케줄 페이지
+![image](https://github.com/jongpilbest/ryokou-main/assets/105302605/7bf8067b-04f2-4417-a794-cddef7fe9cbe)
+
