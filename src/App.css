@@ -452,10 +452,10 @@ background-color: yellow;
 
 .video_mari{
   width: 200%;
-  height: 80vh;
+  height: 85vh;
   background-color: #90A3E2;
   position: absolute;
-  left: -50%;
+  left: 0%;
   z-index: -1;
 }
 .show_video_content{
