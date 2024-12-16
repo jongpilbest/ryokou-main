@@ -1,6 +1,6 @@
 import { useState,useRef } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import About from './Page/About'
 import React from 'react'
 import First from './Page/First'
@@ -17,6 +17,11 @@ function App() {
     <BrowserRouter>
     <Nav ref={inputRef} ></Nav>
     <Routes>
+    <Route path="/" element={<Navigate to="/HOME" replace />} />
+
+
+
+
       <Route path="/HOME" element={
         <Suspense fallback={<p> Loading</p>}>
 
@@ -37,6 +42,9 @@ function App() {
          }}></First>
            </Suspense>
     } />
+
+
+
       <Route path="/About" 
       element={
 

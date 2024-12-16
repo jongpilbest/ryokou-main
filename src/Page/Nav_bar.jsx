@@ -70,7 +70,9 @@ return  (
                     setopen((el)=>!el)
                    }}
                   className="inner_dov">
-                     <NavLink to={El}>  
+                     <NavLink 
+                     className="nav-link" 
+                     to={El}>  
                     <p 
                   key={index}
                   className='inner'>{El}</p> 
@@ -78,39 +80,8 @@ return  (
                     </div>
                 })
                }
-                   <div style={{
-                width:'100%',
-                height:'5vh',
-                borderStyle:'solid',
-                borderColor:'white',
-                borderWidth:'0.1vw',
-                borderRightColor:'transparent',
-               borderBottomColor:'transparent',
-               borderLeftColor:'transparent',
-            
-               }}>
-
-               </div>
-          <div style={{
-            width:'18%',
-            height:'6vh',
-            display:'flex',
-            alignItems:'center',
-       justifyContent:'space-between'
+                 
          
-          }}>
-            <p
-            className="inner_s"
-            > Social Media </p>
-            {
-            icon.map((El,index)=>{
-              return  <div>
-             
-              </div>
-})
-}
-
-          </div>
 </div>
            
     </div>

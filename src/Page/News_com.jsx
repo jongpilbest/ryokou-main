@@ -9,12 +9,14 @@ const NewS_com=function(){
      <p className={classes.infoo}> INFO</p>
    </div>
    <p className={classes.date}> 2023.01.23</p>
-   <p className={classes.p_name}>'녹황색 계획 2023-2024' 지진 여파 티켓 환불 안내 </p>
+   <p className={classes.p_name}>녹황색 계획 2023-2024 지진 여파 티켓 환불 안내 </p>
   </div>
 
 </div>
-<div className={classes.line}></div>
-<div>
+
+<div style={{
+  padding:'5% 0%'
+}}>
  <p className={classes.p_liner}>
  '료쿠샤화 계획 2023-2024' 나고야 공연·오사카 공연에 대해서 호쿠리쿠·조에쓰 방면의 피해 상황을 고려해
 방문이 불가능한 고객에게 대상 티켓 환불을 실시합니다.
@@ -32,7 +34,7 @@ const NewS_com=function(){
 052-320-9100 12:00 18~00:0570 ·오사카 공연</p>
 
 </div>
-<div className={classes.line2}></div>
+<div className={classes.line}></div>
 </>
   )
 }

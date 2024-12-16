@@ -34,7 +34,7 @@ const Scdule= function(){
               className="small_right"
               src={left}></img>
   
-              <p className="cal_p_header">2023.12</p>
+              <p className="cal_p_header">2024.12</p>
               <img
                className="small_right"
               src={right}></img>
@@ -82,13 +82,13 @@ const Scdule= function(){
                       <p className="p_memo">RADIO</p>
                     </div>
                     <div className="memo_">
-                      <p className="p_P">2024.02.27 （火）</p>
+                      <p className="p_P">2024.12.27 （火）</p>
                     </div>
                    
 
                   </div>
                   <div className="right_schedule">
-                    <p className="p_Pp">緑黄色社会・長屋晴子のオールナイトニッポンX</p>
+                    <p className="p_Pp">녹황색사회·나가야 하루코의 올나이트 일본X</p>
                    <p className="p_time">24:00〜 25:00</p>
                    <p className="p_link">
 https://www.allnightnippon.com/haruko/</p>

@@ -13,11 +13,7 @@ import { OrthographicCamera } from '@react-three/drei';
 const Model= React.memo(function({model,scale,position,index}){
   const model_rotate = useSelector((state) => state.store.rotate_model);
 const dispatch = useDispatch()
- console.log('dfd')
-
 const ref=useRef(null)
-
-
 
   return (<>
 

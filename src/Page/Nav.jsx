@@ -50,8 +50,9 @@ const Nav= forwardRef((props,ref)=>{
     height:'80%'
     ,display:'flex',
     backgroundColor:'#90A3E2',
-    borderRadius:'60px',
+    borderRadius:'30px',
     alignItems:'center',
+    padding:'0 5%'
     
       }}>
     {

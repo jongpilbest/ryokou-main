@@ -11,10 +11,6 @@ font-family: 'Inter';
 
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 
 .main_p{
 
@@ -109,7 +105,7 @@ align-items: center;
   margin-right: 2.5vw;
   color:white;
 
-
+  text-decoration: none;
   margin-top: 0;
   margin-bottom: 5vh;
   letter-spacing: 3px;
@@ -526,3 +522,6 @@ background-color: yellow;
   height: 50%;
 }
 
+.nav-link{
+  text-decoration: none; 
+}

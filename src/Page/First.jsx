@@ -28,7 +28,6 @@ function Scene2({data}) {
   const backgroundShaderRef2 = useRef(null)
  
    useEffect(()=>{
-  console.log(model_rotate,'? 지금 모델?')
    },[model_rotate])
   if(data[0]){
   backgroundShaderRef2.current.material.uniforms.u_colorB.value= new Color(data[0])
@@ -259,10 +258,10 @@ const First= function({click}){
                    style={{
                   
                    }}
-                   infinite={true}
+                  
                    horizontal
-                  damping={0.5}
-                  pages={3}>
+                   damping={2}
+                  pages={2.2}>
                     <Scroll>
 
         
