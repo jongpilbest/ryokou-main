@@ -29,12 +29,12 @@ function App() {
     
          <First click={(visible)=>{
           if(visible==false){
-            console.log('false?')
+           
             inputRef.current.style.visibility='hidden'
           inputRef.current.style.height='5vh'
           }
           else{
-            console.log('true?')
+          
             inputRef.current.style.visibility='visible'
             inputRef.current.style.height='9vh'
           }

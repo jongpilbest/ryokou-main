@@ -24,15 +24,10 @@ import Album_div from './Album_div'
 
 
 function Scene2({data}) {
-  const model_rotate = useSelector((state) => state.store.rotate_model);
+
   const backgroundShaderRef2 = useRef(null)
  
-   useEffect(()=>{
-   },[model_rotate])
-  if(data[0]){
-  backgroundShaderRef2.current.material.uniforms.u_colorB.value= new Color(data[0])
-  backgroundShaderRef2.current.material.uniforms.u_colorA.value= new Color(data[1])
-  }
+
   useFrame(({ clock }) => {
     backgroundShaderRef2.current.material.uniforms.uTime.value = clock.getElapsedTime();
 
@@ -79,14 +74,14 @@ const First= function({click}){
 
 
 
-  const model1=useLoader(GLTFLoader, '/new_3.glb')
-  const model7=useLoader(GLTFLoader, '/new_12.glb')
-  const model2=useLoader(GLTFLoader, '/cover4.glb')
-  const model3=useLoader(GLTFLoader, '/new_2.glb')
+  const model1= useMemo(() => useLoader(GLTFLoader, '/new_3.glb'), []); 
+  const model7=useMemo(()=> useLoader(GLTFLoader, '/new_12.glb') ,[]) 
+  const model2=useMemo(()=>useLoader(GLTFLoader, '/cover4.glb'),[]) 
+  const model3=useMemo(()=>useLoader(GLTFLoader, '/new_2.glb') ,[])
   
-  const model4=useLoader(GLTFLoader, '/new_6.glb')
-  const model5=useLoader(GLTFLoader, '/new_7.glb')
-  const model6=useLoader(GLTFLoader, '/new_5.glb')
+  const model4= useMemo(()=> useLoader(GLTFLoader, '/new_6.glb') ,[])  
+  const model5= useMemo(()=>useLoader(GLTFLoader, '/new_7.glb') ,[]) 
+  const model6=useMemo(()=>useLoader(GLTFLoader, '/new_5.glb') ,[])
   
     const total_model_array=[
       model1,model2,model3,model4,model5,model6,model7
@@ -242,6 +237,7 @@ const First= function({click}){
 
              
                 <Canvas 
+                frameloop="demand"
                 orthographic camera={{zoom:250}}
               style={{
                 width:'95%',
@@ -250,7 +246,7 @@ const First= function({click}){
 
               }}
               >
-                     <Scene2 data={collor}  />
+                     <Scene2  />
 
                   { visible &&
       
@@ -260,8 +256,8 @@ const First= function({click}){
                    }}
                   
                    horizontal
-                   damping={2}
-                  pages={2.2}>
+                   damping={0.7}
+                  pages={3}>
                     <Scroll>
 
         

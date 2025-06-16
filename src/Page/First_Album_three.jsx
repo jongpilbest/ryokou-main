@@ -9,9 +9,9 @@ import { OrbitControls, useScroll ,Bounds, Plane} from '@react-three/drei';
 import { useSelector, useDispatch } from 'react-redux'
 import { change_name,change_visible,change_model } from '../storeSlice';
 import React from 'react'
-import { OrthographicCamera } from '@react-three/drei';
+
 const Model= React.memo(function({model,scale,position,index}){
-  const model_rotate = useSelector((state) => state.store.rotate_model);
+
 const dispatch = useDispatch()
 const ref=useRef(null)
 

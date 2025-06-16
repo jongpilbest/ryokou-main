@@ -19,10 +19,9 @@ const Alubm_inner= function(){
   var modell=  useLoader(GLTFLoader, `/album_${name}.glb`)
  
   useFrame((state, delta) => {
-
+ 
         ref.current.rotation.y+=0.005
-  
-    
+
  }
  )
   return(
