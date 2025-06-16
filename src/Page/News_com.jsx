@@ -1,4 +1,4 @@
-import classes from './news.module.css'
+import classes from './News.module.css'
 import React from 'react'
 const NewS_com=function({data}){
   return   (
