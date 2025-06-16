@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react'
-
+import { Suspense } from 'react'
 import react, { useRef ,useMemo, useState,} from 'react'
 // Three
 import { Color } from 'three'
@@ -30,9 +30,9 @@ function Scene2({data}) {
 
   useFrame(({ clock }) => {
     backgroundShaderRef2.current.material.uniforms.uTime.value = clock.getElapsedTime();
-
-
   })
+
+
 
   const uniforms = useMemo(
     () => ({
@@ -200,7 +200,6 @@ const First= function({click}){
  
 
 
-   const [collor,setcoolr]=useState([])
 
 
   return(
@@ -237,7 +236,7 @@ const First= function({click}){
 
              
                 <Canvas 
-                frameloop="demand"
+                dpr={[1, 1.5]} shadows
                 orthographic camera={{zoom:250}}
               style={{
                 width:'95%',
@@ -270,10 +269,13 @@ const First= function({click}){
 }
 
                     {!visible &&
-          
+          <Suspense fallback={null}>
 
-          <Alubm_inner></Alubm_inner>
+    <Alubm_inner></Alubm_inner>
           
+          </Suspense>
+
+      
           
                   }
           

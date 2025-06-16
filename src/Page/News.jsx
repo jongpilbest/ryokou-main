@@ -1,7 +1,7 @@
 
 import NewS_com from "./News_com";
 import React from "react";
-import classes from './news.module.css'
+
 import Sita from "./sita";
 const data=[{'day':'2023.01.23',
   'title':'녹황색 계획 2023-2024 지진 여파 티켓 환불 안내',
